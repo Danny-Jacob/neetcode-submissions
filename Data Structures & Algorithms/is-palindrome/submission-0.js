@@ -1,0 +1,20 @@
+class Solution {
+    /**
+     * @param {string} s
+     * @return {boolean}
+     */
+    isPalindrome(s) {
+        let str= s.toLowerCase().replace(/[^a-z0-9]/g, "");
+        let left = 0;
+        let right = str.length - 1;
+        for (let i=0;i<str.length/2;i++){
+            if (str[left]!==str[right]){
+                return false;
+            }
+            left++;
+            right--;
+
+        }
+        return true;
+    }
+}
